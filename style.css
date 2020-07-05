@@ -1,0 +1,252 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	font-family: "proxima-nova";
+}
+
+/* ---------- Navbar ---------- */
+
+nav {
+	position: absolute;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px;
+	width: 100%;
+}
+
+.logo-wrap {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.logo-wrap img {
+	width: 40px;
+	margin-left: 10px;
+	margin-right: 12px;
+}
+
+.logo-wrap p {
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #9d9d9d;
+}
+
+.nav-buttons {
+	display: flex;
+	align-items: center;
+}
+
+.nav-buttons button {
+	height: 35px;
+	cursor: pointer;
+	margin-left: 15px;
+}
+
+.menuBtn {
+	width: 50px;
+	background: none;
+	border: 1px solid white;
+	border-radius: 2px;
+	padding-top: 4px;
+}
+
+.menuBtn div {
+	height: 1px;
+	border: 1px solid white;
+	margin-bottom: 3px;
+	margin-left: 23px;
+	width: 33%;
+}
+
+.loginBtn {
+	width: 100px;
+	background: none;
+	border: 1px solid white;
+	border-radius: 2px;
+	font-weight: 700;
+	color: white;
+	text-align: end;
+	padding-right: 12px;
+}
+
+.signUpBtn {
+	width: 107px;
+	background: #3aff98;
+	border: none;
+	border-radius: 2px;
+	font-weight: 700;
+	text-align: end;
+	padding-right: 12px;
+	color: black;
+}
+
+/* ---------- Carousel ---------- */
+
+.carousel {
+	display: flex;
+}
+
+.slide {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	height: 100vh;
+	padding-top: 100px;
+}
+
+.slide1 {
+	background-image: url(img/slide-1.png);
+}
+.slide2 {
+	background-image: url(img/slide-2.png);
+}
+.slide3 {
+	background-image: url(img/slide-3.png);
+}
+.slide4 {
+	background-image: url(img/slide-4.png);
+}
+.slide5 {
+	background-image: url(img/slide-5.jpg);
+}
+
+.slide p {
+	font-size: 3.2em;
+	color: #3aff98;
+	font-weight: 700;
+	margin-left: 170px;
+	margin-bottom: 60px;
+	width: 100vw;
+}
+
+/* ---------- Carousel Footer ---------- */
+
+.carousel-footer {
+	position: relative;
+	bottom: 160px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-right: 70px;
+}
+
+.carousel-footer p {
+	color: #3aff98;
+	font-size: 3.3em;
+	font-weight: 700;
+	margin-left: 170px;
+	margin-right: 20px;
+}
+
+.arrow-down,
+.arrow-next {
+	width: 50px;
+	cursor: pointer;
+}
+
+.see-more {
+	display: flex;
+	align-items: center;
+}
+
+/* ---------- Mobile Version ---------- */
+
+@media (max-width: 600px) {
+	/* ---------- Navbar ---------- */
+
+	nav {
+		background: rgba(0, 0, 0, 0.3);
+		padding: 20px 5px;
+	}
+
+	.logo-wrap p {
+		font-size: 0.9em;
+	}
+
+	.nav-buttons button {
+		height: 35px;
+		cursor: pointer;
+		margin-left: 5px;
+	}
+
+	.menuBtn {
+		width: 40px;
+	}
+
+	.menuBtn div {
+		margin-left: 10px;
+		width: 45%;
+	}
+
+	.loginBtn {
+		width: 55px;
+	}
+
+	.signUpBtn {
+		width: 70px;
+	}
+
+	/* ---------- Carousel ---------- */
+
+	.slide1 {
+		background-image: url(img/slide-1-mobile.png);
+	}
+	.slide2 {
+		background-image: url(img/slide-2-mobile.png);
+	}
+	.slide3 {
+		background-image: url(img/slide-3-mobile.png);
+	}
+	.slide4 {
+		background-image: url(img/slide-4-mobile.png);
+	}
+	.slide5 {
+		background-image: url(img/slide-5-mobile.jpg);
+	}
+
+	.slide {
+		padding-top: 250px;
+	}
+
+	.slide p {
+		font-size: 1.8em;
+		margin-left: 20px;
+		margin-bottom: 40px;
+		padding-right: 30px;
+	}
+
+	.slide p br {
+		display: none;
+	}
+
+	/* ---------- Carousel Footer ---------- */
+
+	.carousel-footer {
+		bottom: 80px;
+		padding-right: 20px;
+	}
+
+	.carousel-footer p {
+		font-size: 1.5em;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	.arrow-down,
+	.arrow-next {
+		width: 35px;
+	}
+}
