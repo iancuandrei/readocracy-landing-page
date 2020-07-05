@@ -10,9 +10,9 @@ window.onresize = () => {
 
 let counter = 1;
 
-// Next Slide Button
+// Slider function
 
-nextBtn.onclick = () => {
+const slider = () => {
 	if (counter < 5) {
 		carousel.style.transition = "transform 0.5s ease-in-out";
 		carousel.style.transform = "translateX(" + -size * counter + "px)";
@@ -27,15 +27,16 @@ nextBtn.onclick = () => {
 
 // Next slide every 10 seconds
 
-setInterval(() => {
-	if (counter < 5) {
-		carousel.style.transition = "transform 0.5s ease-in-out";
-		carousel.style.transform = "translateX(" + -size * counter + "px)";
-		counter++;
-	} else {
-		counter = 0;
-		carousel.style.transition = "transform 0.5s ease-in-out";
-		carousel.style.transform = "translateX(" + -size * counter + "px)";
-		counter++;
-	}
+let interval = setInterval(() => {
+	slider();
 }, 10000);
+
+// Next Slide Button
+
+nextBtn.onclick = () => {
+	slider();
+	clearInterval(interval);
+	interval = setInterval(() => {
+		slider();
+	}, 10000);
+};
